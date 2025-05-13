@@ -71,7 +71,9 @@ spec:
     - type: Resource
       resource:
         name: cpu
-        targetAverageUtilization: 85
+        target:
+          type: Utilization
+          averageUtilization: 85
 
 # Payment-service
 ---
@@ -146,7 +148,9 @@ spec:
     - type: Resource
       resource:
         name: cpu
-        targetAverageUtilization: 85
+        target:
+          type: Utilization
+          averageUtilization: 85
 
 # Restaurant-service
 ---
@@ -221,8 +225,9 @@ spec:
     - type: Resource
       resource:
         name: cpu
-        targetAverageUtilization: 85
-
+        target:
+          type: Utilization
+          averageUtilization: 85
 # Customer-service
 ---
 apiVersion: apps/v1
@@ -296,4 +301,6 @@ spec:
     - type: Resource
       resource:
         name: cpu
-        targetAverageUtilization: 85
+        target:
+          type: Utilization
+          averageUtilization: 85
